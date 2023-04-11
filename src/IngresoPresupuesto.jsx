@@ -44,6 +44,7 @@ const IngresoPresupuesto = () => {
       });
     }else{
       setGastos([...gastos, [labelCosto,valorCosto]])
+      setSumaGastos(sumaGastos+valorCosto)
       setInputLabelCosto('')
       setInputValorCosto(0)
       Swal.fire({
@@ -100,7 +101,9 @@ const IngresoPresupuesto = () => {
             </div>
 
             <div className="campo">
-            <button  onClick={(e)=>(verificarGasto(inputLabelCosto,inputValorCosto))}>
+            <button  
+            className="buttonAddGasto"
+            onClick={(e)=>(verificarGasto(inputLabelCosto,inputValorCosto))}>
               Agregar gasto
             </button>
             </div>
@@ -114,11 +117,11 @@ const IngresoPresupuesto = () => {
                {gastos.map((gasto)=>(
                 <div className="gasto"  key={gasto}>
                 <span>{gasto[0]} : ${gasto[1]} </span>
-                {(e)=>setSumaGastos(...+gasto[1])}
+                
               </div>
                ))}
                 
-                <div className="restante">
+                <div className={(inputValue-sumaGastos)>=0 ? "restante" : "restanteNegativo"}>
                     <span>Balance : ${inputValue-sumaGastos} </span>
                 </div>
 

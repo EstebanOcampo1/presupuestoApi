@@ -112,6 +112,16 @@
     color: green;
   }
 
+  .restanteNegativo{
+    border-radius: 10px;
+    margin: 10px;
+    font-weight: 550;
+    font-size: x-large;
+    border: 3px solid red;
+    background-color: pink;
+    color: red;
+  }
+
   .gasto{
     border-radius: 10px;
     margin: 10px;
@@ -122,4 +132,29 @@
     color: blue;
   }
 
+
+  .buttonAddGasto {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Estilo del botón al pasar el mouse sobre él */
+  .buttonAddGasto:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilo del botón al estar presionado */
+  .buttonAddGasto:active {
+    background-color: #003b80;
+  }
   
