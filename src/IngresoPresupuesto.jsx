@@ -30,7 +30,7 @@ const IngresoPresupuesto = () => {
   }
 
   function verificarGasto(labelCosto,valorCosto){
-    if(inputLabelCosto===undefined || inputValorCosto===undefined){
+    if(inputLabelCosto===undefined || inputValorCosto===undefined || inputLabelCosto===''){
       Swal.fire({
         icon: 'error',
         title: 'Error',
